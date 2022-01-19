@@ -7,7 +7,7 @@ var x = 7;
 console.log(y); // Log: Reference error: variable uninitialised, as variables declared with let, do get hoisted but they do not get initialised.
 // Hence an exception is thrown.
 // Here the variable y is said to be in the temporal dead zone
-var y = 8;
+let y = 8;
 // ---- //
 // If we check in the sources -> Global Scope, we can see that the function is already available, 
 // even before the execution of the program starts! The function is hence hoisted
