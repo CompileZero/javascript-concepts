@@ -1,6 +1,6 @@
 // Wherever a new execution context is created, a lexical environment is also created.
 // Lexical environment = Local memory + Lexical Envt of Parent
-// lexically: hierarchically
+// lexically: hierarchically, one inside another
 function a() {
     var b = 10;
     c();
