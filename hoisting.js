@@ -7,6 +7,7 @@ var x = 7;
 console.log(y); // Log: Reference error: variable uninitialised, as variables declared with let, do get hoisted but they do not get initialised.
 // Hence an exception is thrown.
 // Here the variable y is said to be in the temporal dead zone
+// Temporal dead zone is the time between the declaration/hoisitng of a let variable and the initialisation of the variable. When the let variable is hoisted, but not initialised a value, we say that the let variable is in a Temporal Dead Zone.
 let y = 8;
 // ---- //
 // If we check in the sources -> Global Scope, we can see that the function is already available, 
