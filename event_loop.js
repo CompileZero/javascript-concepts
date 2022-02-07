@@ -1,14 +1,32 @@
 // Microtasks, 
+
 setTimeout(() => {
     console.log(1);
 }, 0);
 
-new Promise(resolve => {
+const helloPromise = new Promise(resolve => {
     console.log(2);
     resolve(3);
-}).then(console.log);
-
+});
 console.log(4);
+helloPromise.then(console.log);
+
+
+/*
+$.on('button', 'click', function onClick() {
+    setTimeout(function timer() {
+        console.log('You clicked the button!');
+    }, 2000);
+});
+
+console.log("Hi!");
+
+setTimeout(function timeout() {
+    console.log("Click the button!");
+}, 5000);
+
+console.log("Welcome to loupe.");
+*/
 // Callback functions returned from Promises and Mutation Observers go into the micro-task queue.
 // All the other callback functions go into the callback queue.
 // Micro-task = Callback functions returned from Promises and Mutation Observers
